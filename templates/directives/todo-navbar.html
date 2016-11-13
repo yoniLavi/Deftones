@@ -3,16 +3,34 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#/">deftones</a>
         </div>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseElement">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapseElement">
+            <ul class="nav navbar-nav">
+                <li><a href="#/tour">Tour</a></li>
+                <li><a href="#/store">Store</a></li>
+                <li><a href="#/band">Band</a></li>
+                <li><a href="#/music">Music</a></li>
+            </ul>
+        </div>
+
+<!--
         <ul class="nav navbar-nav">
             <li><a href="#/tour">Tour</a></li>
             <li><a href="#/store">Store</a></li>
             <li><a href="#/band">Band</a></li>
             <li><a href="#/music">Music</a></li>
         </ul>
+        
         <ul class="nav navbar-nav navbar-right">
             <li ng-hide="username"><a href="#/accounts/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
             <li ng-hide="username"><a href="#/accounts/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             <li ng-show="username"><a href="#/accounts/logout"><span class="glyphicon glyphicon-log-out"></span> Logout {{username}}</a></li>
-        </ul>
+        </ul>-->
     </div>
 </nav>
