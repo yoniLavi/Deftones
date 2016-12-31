@@ -7,10 +7,10 @@ footer {
 	width: 100%;
 	background-color: black;
 	color: gray;
-	position: fixed;
+/*	position: fixed;*/
 	bottom: 0;
-	height: 60px;
-	margin-top: 200px;
+	height: 80px;
+	margin-top: 0px;
 }
 
 footer p {
@@ -22,15 +22,18 @@ table {
 }
 
 .nav_drop {
-	margin-top: 100px;
+	margin-top: 50px;
+	padding-top: 50px;
+	min-height: 100%;
+	background-color: gray;
 }
 
 .video {
-	padding-top: 30px;
+	padding-bottom: 50px;
 }
 
 .news {
-	margin: 70px 0px 100px 0px;
+	margin: 50px 0px 100px 0px;
 	width:500px;
 	height:500px;
 	overflow-y: auto;
@@ -41,6 +44,49 @@ table {
 	color: gray;
 }
 
+.store {
+	margin: 20px 0px 500px 20px;
+	width:400px;
+	height:240px;
+	padding: 40px;
+	border: 5px solid white;
+	border-radius: 15px;
+	background-color: black;
+	color: gray;
+}
+
+.reg_form {
+	margin: 70px 0px 100px 0px;
+	width:500px;
+	height:620px;
+	padding: 40px;
+	border: 5px solid white;
+	border-radius: 15px;
+	background-color: black;
+	color: gray;
+}
+
+.field {
+	float: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+fieldset legend {
+	font-weight: bold;
+}
+
+fieldset button {
+	float: right;
+	margin: 20px 20px 0px 0px;
+	width: 70px;
+}
+
+/*fieldset input {
+	width: 200px;
+}*/
+
 .home_background {
 	background-image: url("images/background.jpg");
 	background-size: cover;
@@ -48,15 +94,30 @@ table {
 	justify-content: center;
 	margin-top: 50px;
 }
+
+.store_background {
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	display:flex;
+	/*justify-content: left;*/
+	margin-top: 50px;
+}
+
 /*to centre the carousel images*/
 .carousel-inner img {
   margin: auto;
+  max-height: 500px;
 }
-/*to centre the carousel text*/
+/*to style the carousel text*/
 .item {
 	text-align: center;
+	color: black;
+	margin-bottom: 100px;
 }
 
+#Player1 {
+	width: 360px;
+}
 
 @media screen and (min-width:768px){}
 @media screen and (min-width:992px){}

@@ -1,21 +1,77 @@
-<todo-navbar></todo-navbar>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <form name="registrationForm" data-ng-submit="submitForm()" novalidate>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control" data-ng-model="user.username" required>
-                    <p data-ng-show="registrationForm.name.$pristine" class="help-block">Your username is required</p>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control" data-ng-model="user.password" required>
-                    <p data-ng-show="registrationForm.password.$pristine" class="help-block">Your password is required</p>
-                </div>
+<deftones-navbar></deftones-navbar>
 
-                <button type="submit" class="btn btn-primary" data-ng-disabled="registrationForm.$invalid">Register</button>
-            </form>
-        </div>
-    </div>
+<div class="home_background">
+	<div class="reg_form">
+		<form data-ng-submit="submitForm()">
+			<fieldset><!--creates a grouping for the labels-->
+				<legend>Login</legend><!--adds a legend to the fieldset-->
+					<p>
+						<label for="fname" class="field">* Username:</label>  
+						<input type="text" id="username" name="uname" autofocus required />
+					</p>
+
+					<p>
+						<label for="password" class ="field">* Password:</label>
+						<input id="password" name="pword" placeholder="Minimum 8 characters" type="password" required />
+					</p>
+
+					<p>
+						<label for="password" class ="field">*</label>
+						<input id="password" name="password" placeholder="Re-enter password" type="password" required />
+					</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Personal</legend>
+					<p>
+						<label for="firstName" class="field">* First Name:</label>  
+						<input type="text" id="firstName" name="fname" required />
+					</p>
+
+					<p>
+						<label for="lastName" class="field">* Last Name:</label>
+						<input type="text" id="lastName" name="lname" required />
+					</p>
+
+					<p>
+						<label for="country" class="field">* Country:</label>
+						<input type="text" id="country" name="country"  required/>
+					</p>
+
+					<p>
+						<label for="dob" class="field">Date Of Birth:</label>
+						<input type="date" id="dob" name="dob"/>
+					</p>
+
+					<p>
+						<label for="gender" class="field">Gender:</label>  
+						<input type="radio" name="gender" value="Male"/>Male
+						<input type="radio" name="gender" value="Female"/>Female
+					</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Contact</legend>
+					<p>
+						<label for="tel" class="field">Telephone:</label>  
+						<input type="tel" id="telephone" name="tel"/>
+					</p>
+
+					<p>
+						<label for="email" class="field">* Email:</label>
+						<input type="email" id="email" name="email" required />
+					</p>
+			</fieldset>
+
+			<fieldset>
+				<p>
+					<button type="submit" class="btn btn-success">Join</button>
+
+					<button type="button" ng-click="canForm()" class="btn btn-danger">Cancel</button>
+				</p>
+		</form>
+	</div>
+
 </div>
+
+<deftones-footer></deftones-footer>

@@ -1,5 +1,5 @@
 angular.module('Deftones', ['ngRoute', 'angular-storage', 'RouteControllers',
-                           'UserService', 'ToDoDirective']);
+                           'TourService', 'DeftonesDirective']);
 
 angular.module('Deftones').config(function($routeProvider) {
     $routeProvider.when('/', {
@@ -21,5 +21,9 @@ angular.module('Deftones').config(function($routeProvider) {
     .when('/music', {
         templateUrl: 'templates/music.html',
         controller: 'MusicController'
+    })
+    .when('/register', {
+        templateUrl: 'templates/register.html',
+        controller: 'RegisterController'
     })
 });

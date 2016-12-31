@@ -1,21 +1,28 @@
 angular.module('RouteControllers', [])
-    .controller('HomeController', function($scope, store) {
+    .controller('HomeController', function($scope) {
         $scope.title = 'deftones home page!';
-        $scope.username = store.get('username');
     })
-    .controller('TourController', function($scope, store) {
-        $scope.title = 'deftones tour page!';
-        $scope.username = store.get('username');
+    .controller('TourController', function($scope, TourAPIService) {
+        TourAPIService.getTours().then(function(result){
+            $scope.tours=result.data;
+        });
     })
-    .controller('StoreController', function($scope, store) {
+    .controller('StoreController', function($scope) {
         $scope.title = 'deftones store page!';
-        $scope.username = store.get('username');
     })
-    .controller('BandController', function($scope, store) {
+    .controller('BandController', function($scope) {
         $scope.title = 'deftones band page!';
-        $scope.username = store.get('username');
     })
-    .controller('MusicController', function($scope, store) {
+    .controller('MusicController', function($scope) {
         $scope.title = 'deftones music page!';
-        $scope.username = store.get('username');
+    })
+    .controller('RegisterController', function($scope, $location) {
+        $scope.submitForm = function() {
+            $location.path('/');
+            setTimeout(function(){
+                alert('Congratulations! You are now a member of this site'); }, 1000);
+        };
+        $scope.canForm = function() {
+            $location.path('/');
+        }
     })
