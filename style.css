@@ -1,16 +1,26 @@
+html,
 body {
-	/*padding-top: 70px;*/
-	height:100%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#main-container {
+	min-height: 100%;
+	position: relative;
+}
+
+#body-template {
+	padding-bottom: 80px;   /* Height of the footer */
 }
 
 footer {
-	width: 100%;
 	background-color: black;
 	color: gray;
-/*	position: fixed;*/
+	position: absolute;
 	bottom: 0;
 	height: 80px;
-	margin-top: 0px;
+	width: 100%;
 }
 
 footer p {
@@ -25,7 +35,6 @@ table {
 	margin-top: 50px;
 	padding-top: 50px;
 	min-height: 100%;
-	background-color: gray;
 }
 
 .video {

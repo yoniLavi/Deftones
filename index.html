@@ -8,8 +8,10 @@
 
 </head>
 <body>
-    <div data-ng-view>
-       <!--  Partial templates displayed here -->
+    <div id="main-container">
+        <deftones-navbar></deftones-navbar>
+        <div id="body-template" data-ng-view><!--  Partial templates displayed here --></div>
+        <deftones-footer></deftones-footer>
     </div>
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -21,6 +23,6 @@
     <script src='js/controller.js'></script>
     <script src='js/service.js'></script>
     <script src='js/directive.js'></script>
-    
+
 </body>
 </html>
